@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="ko-KR">
+  <!-- https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_expressions -->
+  <!-- https://www.miketaylr.com/pres/html5/forms2.html -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,21 +11,111 @@
     <h1>form 관련 요소</h1>
     <h2>input 요소</h2>
     <!-- 한 줄 입력서식 -->
+    <!-- required는 필수입력 항목을 뜻함 -->
+    <!-- label과 input을 연결하는게 id값을 주고 for에 넣는 것 -->
+    <!-- label안에 input을 넣을 수는 있지만 오류가 생길 수 있음 -->
     <form action="/">
       <fieldset>
         <legend>폼 서식</legend>
         <div>
           <label for="userName">이름</label>
-          <input type="text" id="userName" />
+          <input
+            type="text"
+            id="userName"
+            required
+            placeholder="예) 전아정"
+            maxlength="5"
+            minlength="3"
+          />
         </div>
+        <!-- 비밀번호 입력 서식 -->
         <div>
           <label for="userPwd">비밀번호</label>
-          <input type="password" id="userPwd" />
+          <input
+            type="password"
+            name="userPwd"
+            id="userPwd"
+            required
+            placeholder="8자리 이상"
+          />
         </div>
+        <!-- 검색 입력 서식 -->
         <div>
           <label for="likelionSearch">검색</label>
-          <input type="search" id="likelionSearch" />
+          <input
+            type="search"
+            name="likelionSearch"
+            id="likelionSearch"
+            placeholder="검색어를 입력하세요"
+          />
         </div>
+        <!-- 이메일 입력 서식 -->
+        <div>
+          <label for="userEmail">이메일</label>
+          <input type="email" name="userEmail" id="userEmail" required />
+        </div>
+        <!-- 단어 멀티커서 하려면 Ctrl+d -->
+        <!-- Tel 유형의 입력 서식 -->
+        <div>
+          <label for="userPhone">연락처</label>
+          <input
+            type="tel"
+            name="userPhone"
+            id="userPhone"
+            required
+            placeholder="- 제외"
+          />
+        </div>
+        <!-- checkbox 서식 -->
+        <!-- 같은 checkbox는 name을 통일시켜줘야함 -->
+        <!-- 디폴트로 체크해두게 하고싶으면 Checked를 입력하면 됨 -->
+        <div>
+          <input
+            type="checkbox"
+            value="html"
+            checked
+            name="clssLikelion"
+            id="classHtml"
+          />
+          <label for="classHtml">HTML</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            value="css"
+            name="clssLikelion"
+            id="classCss"
+          />
+          <label for="classCss">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" value="js" name="clssLikelion" id="classJs" />
+          <label for="classJs">JS</label>
+        </div>
+        <!-- name을 똑같이 주지 않으면 독립적인 속성이라고 생각해서 체크가 2개 다 가능해짐 -->
+        <!-- radio 서식 -->
+        <div>
+          <input
+            type="radio"
+            value="classRoom1"
+            name="classRoom"
+            id="classRoom1"
+          />
+          <label for="classRoom1">회고 1팀</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            value="classRoom2"
+            name="classRoom"
+            id="classRoom2"
+          />
+          <label for="classRoom2">회고 2팀</label>
+        </div>
+        <!-- 전송 버튼 -->
+        <!-- submit은 action에 설정한 경로로 보내는 역할을 함 -->
+        <!-- <button type="submit">전송</button> 으로도 작성 가능 -->
+        <input type="submit" value="전송" />
       </fieldset>
     </form>
   </body>
