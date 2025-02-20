@@ -1,0 +1,45 @@
+/* 전체 요소를 선택하는 것 */
+/* body를 앞에 붙이면 body의 전체가 된다고 이해하면 됨 */
+* {
+  margin: 0;
+}
+
+body {
+  color: olive;
+  margin: 0;
+}
+h1 {
+  font-size: 1em;
+}
+
+/* 점수가 10점 우선순위가 밀림 */
+/* !important는 id도 class도 다 밀고 우선순위 최상위로 올라옴 */
+.ai {
+  background-color: orange !important;
+}
+
+/* 같은 p중에 우선순위를 두고싶다면 body를 붙이면 우선순위가 올라감 붙여쓰기하면 안됨 */
+/* 형제를 주고 + 를 붙이면 점점더 구체적이어서 우선순위가 올라감 */
+body h2 + p {
+  background-color: yellow;
+}
+
+/* 가장 높은 우선순위가 됨 점수가 12점 */
+body p[class] {
+  background-color: lime;
+}
+
+/* 스타일을 선택할 땐 id보다는 class를 사용함 */
+#ai {
+  background-color: pink;
+}
+
+/* ai가 겹칠 때 차이점을 찾아서 추가해야함 */
+.ai.copilot {
+  border: 10px dotted blue;
+}
+
+/* inherit은 부모로부터 상속받는다는 뜻 */
+a {
+  color: inherit;
+}
