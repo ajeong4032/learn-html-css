@@ -1,0 +1,49 @@
+/* body {
+  font-family: 'pretendard Variable';
+} */
+
+/* 루트 요소 */
+:root {
+  /* 뷰포트의 사이즈에 맞추려면 vw 단위 사용 */
+  /* font-size: 10px; */
+  font-size: clamp(12xp, 3vw, 24px);
+}
+
+/* 
+body{
+    @font-face {
+        font-family: 'SUIT-Regular';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+} */
+
+body {
+  font-family: 'SUIT', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+/* font-관련 속성 */
+/* font-size에서는 %와 em은 같은 의미 */
+.size {
+  color: green;
+  /* font-size: 12px; */
+  /* font-size: 20px; */
+  font-weight: 300;
+  font-style: italic;
+  /* 글자크기가 없으면 상속받은 값으로 계산하고, 값이 있으면 그 값으로 계산 */
+  line-height: 1;
+  font-variant: small-caps;
+  font-family: 'pretendard cariable', sans-serif;
+  /* 글자 크기와 글꼴은 필수로 값을 줘야함 */
+  /* font: bold italic small-caps 24px / 1.5 'pretendard variable'; */
+}
+
+/* 단위 - rem */
