@@ -8,7 +8,7 @@ p {
   &:hover {
     background-color: skyblue;
   }
-  /* p요소는 focus를 사용할 수 없음, 강제로 부여는 가능함 p태크에 tabindex="0"을 부여해야함 */
+  /* p요소는 focus를 사용할 수 없음, 강제로 부여는 가능함 p태그에 tabindex="0"을 부여해야함 */
   &:focus {
     border: 10px solid red;
   }
