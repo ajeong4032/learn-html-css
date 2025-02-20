@@ -1,0 +1,32 @@
+/* 클래스 선택자 */
+/* 배경색상 */
+/* font-variant 속성으로 대문자 변환은 가능했지만 크기가 작은 대문자인 관계로 주석처리하고 text-tranform 사용 */
+.member-service {
+  background-color: yellow;
+  /* 상속이 유리할 때는 member-service, 직접 해당 태그가 유리하면 태그에 작성 */
+  /* font-variant: small-caps; */
+  text-transform: uppercase;
+  /* font 단축 속성을 사용하여 글자 크기와 글꼴을 지정 */
+  font: 1.125rem, suit, sans-serif;
+}
+
+/* 태그 선택자 */
+/* 아래의 태그들은 a가 많아지면 사용하기 위험한 태그임 / member-service의 내부에 넣어야함 */
+/* 웹브라우저 스타일(밑줄)을 재정의 */
+/* 웹브라우저 링크 스타일(색상)을 재정의 (상속방법사용) */
+.item {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* a요소이면서 가상요소 선택자 */
+/* 파이프기호(|)는 Shift+\ */
+.item::before {
+  content: ':';
+}
+
+/* 첫번째 a요소의 before를 빈칸으로 바꾸는 방법, 만약 after를 썼다면 last-child::after를 사용 */
+/* a요소보다 우선순위가 높기때문에 :을 재정의 한 것 */
+.item.first::before {
+  content: '';
+}
