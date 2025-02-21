@@ -1,0 +1,18 @@
+/* &는 자기자신이 포함된 block에 클래스병을 그대로 가지고와서 값 할당 */
+.likelion {
+  .likelion__list {
+    list-style: none;
+    /* 선택자가 나올 때는 빈 줄을 넣어서 다른 선택자가 있음을 표현 */
+    &:hover {
+      background-color: pink;
+    }
+  }
+
+  .likelion__item {
+    color: green;
+  }
+
+  .likelion__link {
+    color: inherit;
+  }
+}
