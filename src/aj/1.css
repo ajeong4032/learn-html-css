@@ -1,0 +1,10 @@
+li {
+  background-color: rgb(39, 39, 97);
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
