@@ -1,0 +1,112 @@
+/* 강사님 답안 */
+스타일 초기화 body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+body {
+  font-family: 'SUIT', sans-serif;
+}
+
+/* 멤버 서비스 */
+.member-service {
+  background: yellow;
+  display: flow-root;
+
+  a {
+    /* background: lime; */
+    float: left;
+    text-transform: uppercase;
+  }
+
+  a:nth-child(n + 2)::before {
+    content: '|';
+    margin: 0 0.5em;
+  }
+}
+
+/* 멤버 링크 */
+.member-link {
+  border: 1px solid red;
+  display: flow-root;
+
+  li {
+    background: skyblue;
+    float: left;
+
+    span {
+      background: pink;
+      float: left;
+      margin: 0 0.5em;
+    }
+
+    a {
+      background: orange;
+      float: left;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* 스타일 초기화 */
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+body {
+  font-family: SUIT, sans-serif;
+}
+
+/* 멤버 서비스 */
+.member-service {
+  background: yellow;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.item {
+  position: relative;
+  padding-right: 10px;
+}
+
+.item::after {
+  content: '|';
+  position: absolute;
+  right: -1px;
+}
+
+.item:last-child::after {
+  content: '';
+}
+
+/* 멤버 링크 */
+.member-link {
+  background: pink;
+  text-transform: uppercase;
+  display: flex;
+}
