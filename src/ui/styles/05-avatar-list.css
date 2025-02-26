@@ -1,0 +1,51 @@
+@import '/src/ui/components/avatar/avatar.css';
+
+/* 아바타리스트 */
+/* case 01 - inline-block */
+.case-01 {
+  background: yellow;
+  margin: 20px;
+  /* 부모상자의 크기를 고정해뒀지만 고정하지 않으면 화면의 크기에 따라 내부 요소들의 위치가 달라짐 */
+  width: 360px;
+  border: 2px solid red;
+  border-radius: 4px;
+
+  ul {
+    background: pink;
+    font-size: 0;
+    padding: 10px;
+  }
+
+  li {
+    background: lime;
+    /* inline-block이기 때문에 margin이 겹치지 않음, line-height에서 마진이 각각 따로 적용됨 */
+    display: inline-block;
+    font-size: 1rem;
+    margin: 10px;
+  }
+}
+
+/* case 02 - float */
+.case-02 {
+  background: yellow;
+  margin: 20px;
+  border: 2px solid red;
+  border-radius: 4px;
+
+  ul {
+    width: 360px;
+    background: pink;
+    padding: 10px;
+    margin: 0 auto;
+    display: flow-root;
+  }
+
+  li {
+    background: lime;
+    margin: 10px;
+    float: left;
+  }
+}
+
+/* case 03 - flex */
+/* case 04 - grid */
