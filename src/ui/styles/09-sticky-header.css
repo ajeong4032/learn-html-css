@@ -10,6 +10,10 @@ h1 {
   color: #333;
   padding: 1rem;
   background: #fff;
+  position: sticky;
+  /* top: 0;의 논리 속성은 inset-block-start이다. */
+  inset-block-start: 0;
+  z-index: 1;
 }
 
 .container {
@@ -24,9 +28,14 @@ h1 {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
+    position: sticky;
+    top: 80px; /* 상단에 고정되도록 설정 */
+    inset-inline-start: 80px;
   }
 
   .team-header {
+    position: sticky;
+    top: 0; /* 상단에 고정되도록 설정 */
     display: block;
     padding: 1rem;
     background-color: var(--pastel-dark-blue);
