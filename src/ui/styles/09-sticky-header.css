@@ -13,6 +13,7 @@ h1 {
   position: sticky;
   /* top: 0;의 논리 속성은 inset-block-start이다. */
   inset-block-start: 0;
+  /* 겹치는 순서를 제어 */
   z-index: 1;
 }
 
@@ -34,8 +35,6 @@ h1 {
   }
 
   .team-header {
-    position: sticky;
-    top: 0; /* 상단에 고정되도록 설정 */
     display: block;
     padding: 1rem;
     background-color: var(--pastel-dark-blue);
