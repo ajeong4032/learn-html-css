@@ -1,0 +1,37 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+
+/* 헤더 */
+.header {
+  background: var(--pastel-yellow);
+  height: 10vh;
+}
+
+/* main, sidebar */
+.content-wrapper {
+  border: 1px solid blue;
+}
+
+/* 내비게이션 */
+.navigation {
+  background: var(--pastel-pink);
+  height: 15vh;
+}
+
+/* 메인 */
+.content {
+  background: var(--pastel-green);
+  height: 40vh;
+}
+
+/* 사이드바 */
+.sidebar {
+  background: var(--pastel-blue);
+  height: 25vh;
+}
+
+/* 푸터 */
+.footer {
+  background: var(--pastel-purple);
+  height: 10vh;
+}
